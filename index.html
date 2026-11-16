@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover"><meta content="#07070a" name="theme-color"/><title>ZEVO Audit by Kym Feltus | Three Questions + Evidence | FELTUS LABS</title><style>
 :root{--bg:#050507;--panel:#0d0e13;--panel-light:#121219;--line:#25242e;--line-soft:#1b1b24;--white:#f6f5fa;--muted:#a5a2b4;--subtle:#777482;--violet:#a460ff;--violet2:#7737f7;--violetdim:#261631;--blue:#69c6f6;--amber:#e9b968;--pink:#fb739a}
@@ -372,7 +372,45 @@ body{width:100%;min-height:calc(var(--vh,1vh)*100);min-height:100dvh;overflow-x:
 @media(max-width:1280px){.audit-q-metrics{grid-template-columns:repeat(3,minmax(0,1fr))}.app-screen.decision-screen .decision-layout{grid-template-columns:1fr}.app-screen.decision-screen .decision-sidebar{position:static;grid-template-columns:repeat(2,minmax(0,1fr))}.audit-q-insight{grid-column:1/-1}}
 @media(max-width:730px){.audit-q-metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.audit-q-metric{padding:14px}.audit-q-hero h1{font-size:clamp(30px,8vw,44px)}.audit-q-status{font-size:9px}.app-screen.decision-screen .decision-sidebar{grid-template-columns:1fr}.audit-q-insight{grid-column:auto}.audit-q-conclusion{display:block}.audit-q-conclusion button{margin-top:15px}.audit-q-navigation>span{display:none}.audit-q-navigation button{flex:1}.audit-guided-question.subquestion{padding:16px 12px;grid-template-columns:34px 1fr;gap:10px}.audit-guided-question .sq-num{width:32px}.audit-q-insight-row b{max-width:52%}}
 @media(max-width:430px){.audit-q-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.audit-q-metric strong{font-size:23px}.audit-q-breadcrumb{font-size:8px}.audit-q-hero{padding-bottom:17px}.audit-q-navigation{gap:7px}.audit-q-navigation button{padding:10px 8px}}
-</style><script id="universal-screen-metrics">
+
+/* ===== ZEVO IMAGE LANDING START ===== */
+.zevo-audit-app-hidden{display:none!important}
+#zevo-landing[hidden]{display:none!important}
+html.landing-active,body.landing-active{overflow:hidden;width:100%;height:100%}
+body.landing-active{overscroll-behavior:none}
+.zevo-landing{position:fixed;inset:0;z-index:9999;width:100%;height:100dvh;overflow:hidden;background:#050308;display:grid;place-items:center;opacity:1;transition:opacity .28s ease}
+.zevo-landing.leaving{opacity:0;pointer-events:none}
+.zevo-landing-stage{position:relative;width:min(100vw,1920px,calc(100dvh * 1.776833));max-height:100dvh;aspect-ratio:1672 / 941}
+.zevo-landing-picture,.zevo-landing-picture img{display:block;width:100%;height:100%}
+.zevo-landing-picture{position:absolute;inset:0}
+.zevo-landing-picture img{object-fit:contain;object-position:center;user-select:none;-webkit-user-drag:none;pointer-events:none}
+.zevo-hotspot-layer{position:absolute;inset:0;pointer-events:none}
+.audit-hotspot{position:absolute;display:block;appearance:none;-webkit-appearance:none;background:transparent;border:1px solid transparent;border-radius:12px;cursor:pointer;z-index:5;color:transparent;font-size:0;padding:0;margin:0;pointer-events:auto;transition:background .2s ease,border-color .2s ease,box-shadow .2s ease,transform .2s ease}
+.audit-hotspot:hover,.audit-hotspot:focus-visible{background:rgba(181,102,255,.08);border-color:rgba(224,180,255,.35);box-shadow:0 0 18px rgba(164,83,255,.20),inset 0 0 15px rgba(195,123,255,.06)}
+.audit-hotspot:focus-visible{outline:2px solid rgba(230,195,255,.95);outline-offset:3px}
+.mobile-hotspot-layer{display:none}
+/* Desktop hotspot bounds measured against the 1672 x 941 artwork. */
+.hs-view-findings{left:12.3206%;top:39.7450%;width:14.7727%;height:5.5260%}
+.hs-open-evidence{left:28.5885%;top:39.7450%;width:12.5598%;height:5.5260%}
+.hs-pdf-1{left:47.3086%;top:70.9883%;width:13.3971%;height:14.3464%;border-radius:8px}
+.hs-pdf-2{left:62.1411%;top:70.9883%;width:13.3373%;height:14.3464%;border-radius:8px}
+.hs-pdf-3{left:76.9139%;top:70.9883%;width:12.9785%;height:14.3464%;border-radius:8px}
+.hs-enter{left:39.3541%;top:87.7790%;width:21.3517%;height:6.6950%;border-radius:20px}
+@media(max-width:720px){
+  .zevo-landing-stage{width:100%;height:100dvh;max-height:none;aspect-ratio:auto;overflow:hidden}
+  .zevo-landing-picture,.zevo-landing-picture img{width:100%;height:100%}
+  .zevo-landing-picture img{object-fit:contain;object-position:center}
+  .desktop-hotspot-layer{display:none}
+  .mobile-hotspot-layer{display:block;inset:50% auto auto 50%;width:min(100vw,56.2799dvh);height:auto;aspect-ratio:941 / 1672;transform:translate(-50%,-50%)}
+  .mobile-view-findings{left:16.0468%;top:22.3684%;width:37.0882%;height:3.2895%}
+  .mobile-open-evidence{left:56.2168%;top:22.3684%;width:29.4368%;height:3.2895%}
+  .mobile-pdf-1{left:13.7088%;top:81.4593%;width:23.1668%;height:8.3732%;border-radius:8px}
+  .mobile-pdf-2{left:39.0011%;top:81.4593%;width:23.9107%;height:8.3732%;border-radius:8px}
+  .mobile-pdf-3{left:63.7620%;top:81.4593%;width:22.5292%;height:8.3732%;border-radius:8px}
+  .mobile-enter{left:28.9054%;top:91.9258%;width:41.7641%;height:4.6053%;border-radius:20px}
+}
+@media(prefers-reduced-motion:reduce){.zevo-landing,.audit-hotspot{transition:none!important}}
+/* ===== ZEVO IMAGE LANDING END ===== */</style><script id="universal-screen-metrics">
 /* Screen metrics / CSS-only adaptation. The audit's own logic is untouched. */
 (function initUniversalScaler(){
   'use strict';
@@ -402,7 +440,34 @@ body{width:100%;min-height:calc(var(--vh,1vh)*100);min-height:100dvh;overflow-x:
 })();
 </script>
 </head><body>
-<div class="app">
+<!-- ZEVO_EXACT_LANDING_START -->
+<section id="zevo-landing" class="zevo-landing" aria-label="ZEVO Corp Audit landing page">
+  <div class="zevo-landing-stage">
+    <picture class="zevo-landing-picture">
+      <source media="(max-width: 720px)" srcset="./ZEVO%20Audit%20Intelligence%20Mobile%20Poster.png">
+      <img id="zevo-landing-art" src="./Neon%20Audit%20Intelligence%20Dashboard.png" alt="ZEVO Corp Audit by FELTUS LABS" draggable="false">
+    </picture>
+    <div class="zevo-hotspot-layer desktop-hotspot-layer">
+      <button class="audit-hotspot desktop-hotspot hs-view-findings" data-enter-audit="overview" aria-label="View Audit Findings"></button>
+      <button class="audit-hotspot desktop-hotspot hs-open-evidence" data-enter-audit="evidence" aria-label="Open Evidence"></button>
+      <button class="audit-hotspot desktop-hotspot hs-pdf-1" data-enter-audit="evidence" aria-label="Billing and Rate Review"></button>
+      <button class="audit-hotspot desktop-hotspot hs-pdf-2" data-enter-audit="evidence" aria-label="Financial Analysis"></button>
+      <button class="audit-hotspot desktop-hotspot hs-pdf-3" data-enter-audit="evidence" aria-label="Process and Controls"></button>
+      <button class="audit-hotspot desktop-hotspot hs-enter" data-enter-audit="overview" aria-label="Enter ZEVO Audit"></button>
+    </div>
+    <div class="zevo-hotspot-layer mobile-hotspot-layer">
+      <button class="audit-hotspot mobile-hotspot mobile-view-findings" data-enter-audit="overview" aria-label="View Audit Findings"></button>
+      <button class="audit-hotspot mobile-hotspot mobile-open-evidence" data-enter-audit="evidence" aria-label="Open Evidence"></button>
+      <button class="audit-hotspot mobile-hotspot mobile-pdf-1" data-enter-audit="evidence" aria-label="Billing and Rate Review"></button>
+      <button class="audit-hotspot mobile-hotspot mobile-pdf-2" data-enter-audit="evidence" aria-label="Financial Analysis"></button>
+      <button class="audit-hotspot mobile-hotspot mobile-pdf-3" data-enter-audit="evidence" aria-label="Process and Controls"></button>
+      <button class="audit-hotspot mobile-hotspot mobile-enter" data-enter-audit="overview" aria-label="Enter ZEVO Audit"></button>
+    </div>
+  </div>
+</section>
+<!-- ZEVO_EXACT_LANDING_END -->
+
+<div class="app zevo-audit-app-hidden">
 <aside class="sidebar">
 <div class="side-head"><div class="workspace-label"><span class="small-grid">▦</span> FORENSIC WORKSPACE</div><div class="case-id"><span class="signal-pip"></span> CASE 001 <span class="case-route">/ ZEVO</span></div></div>
 <div class="side-section-label">NAVIGATION</div>
@@ -877,4 +942,55 @@ function closeDrawer(){drawer.classList.remove("open");dbg.classList.remove("ope
  for(const r of seeds)updateRecord(r);
  render();init();
 })();
-</script><script id="feltus-questionnaire-progress">(function(){function sync(){['tax','abandonment','formd'].forEach(function(name){var page=document.getElementById('screen-'+name);if(!page)return;var groups=page.querySelectorAll('.yn');var n=Array.from(groups).filter(function(g){return !!g.querySelector('button.selected')}).length;var count=page.querySelector('[data-progress-for="'+name+'"]');var fill=page.querySelector('[data-progress-fill="'+name+'"]');if(count)count.textContent=n+' of '+groups.length+' responses recorded';if(fill)fill.style.width=(groups.length?100*n/groups.length:0)+'%';});}document.addEventListener('click',function(e){if(e.target.closest('.yn button'))requestAnimationFrame(sync)});sync()})();</script></body></html>
+</script><script id="feltus-questionnaire-progress">(function(){function sync(){['tax','abandonment','formd'].forEach(function(name){var page=document.getElementById('screen-'+name);if(!page)return;var groups=page.querySelectorAll('.yn');var n=Array.from(groups).filter(function(g){return !!g.querySelector('button.selected')}).length;var count=page.querySelector('[data-progress-for="'+name+'"]');var fill=page.querySelector('[data-progress-fill="'+name+'"]');if(count)count.textContent=n+' of '+groups.length+' responses recorded';if(fill)fill.style.width=(groups.length?100*n/groups.length:0)+'%';});}document.addEventListener('click',function(e){if(e.target.closest('.yn button'))requestAnimationFrame(sync)});sync()})();</script>
+<script id="zevo-exact-landing-controller">
+(function(){
+  const landing=document.getElementById('zevo-landing');
+  const app=document.querySelector('.app');
+  if(!landing||!app)return;
+  const backgroundElements=Array.from(document.body.children).filter(function(element){
+    return element!==landing&&element.tagName!=='SCRIPT';
+  });
+  const previousInertStates=backgroundElements.map(function(element){return element.inert;});
+  const previousAriaHiddenStates=backgroundElements.map(function(element){
+    return element.getAttribute('aria-hidden');
+  });
+  backgroundElements.forEach(function(element){
+    element.inert=true;
+    element.setAttribute('aria-hidden','true');
+  });
+  document.documentElement.classList.add('landing-active');
+  document.body.classList.add('landing-active');
+  let entering=false;
+  const reducedMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function enterZevoAudit(targetView='overview'){
+    if(entering)return;
+    entering=true;
+    landing.classList.add('leaving');
+    window.setTimeout(function(){
+      landing.hidden=true;
+      document.documentElement.classList.remove('landing-active');
+      document.body.classList.remove('landing-active');
+      backgroundElements.forEach(function(element,index){
+        element.inert=previousInertStates[index];
+        if(previousAriaHiddenStates[index]===null){
+          element.removeAttribute('aria-hidden');
+        }else{
+          element.setAttribute('aria-hidden',previousAriaHiddenStates[index]);
+        }
+      });
+      app.classList.remove('zevo-audit-app-hidden');
+      if(location.hash==='#'+targetView){
+        window.dispatchEvent(new HashChangeEvent('hashchange'));
+      }else{
+        location.hash=targetView;
+      }
+      window.scrollTo(0,0);
+    },reducedMotion?0:280);
+  }
+  document.querySelectorAll('#zevo-landing [data-enter-audit]').forEach(function(button){
+    button.addEventListener('click',function(){enterZevoAudit(button.dataset.enterAudit||'overview');});
+  });
+})();
+</script>
+</body></html>
