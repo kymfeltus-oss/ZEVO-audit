@@ -1,0 +1,46 @@
+/* FELTUS LABS — homepage-only, scoped styles. Does not style other site pages. */
+#feltus-homepage{--midnight:#030512;--navy:#080c21;--violet:#b12dff;--purple:#6b1cc8;--cyan:#13d4ff;--white:#f6f8ff;--muted:#a7aec7;color:var(--white);background:radial-gradient(ellipse at 83% 41%,#152251 0%,transparent 49%),radial-gradient(ellipse at 40% 94%,#211036 0%,transparent 43%),var(--midnight);font-family:"DM Sans",sans-serif;min-height:100vh;overflow:hidden}
+#feltus-homepage *,#feltus-homepage *::before,#feltus-homepage *::after{box-sizing:border-box}
+#feltus-homepage a{color:inherit;text-decoration:none}
+#feltus-homepage button{font:inherit}
+#feltus-homepage :focus-visible{outline:2px solid var(--cyan);outline-offset:5px}
+#feltus-homepage .feltus-shell{width:min(1450px,calc(100% - 8vw));margin-inline:auto}
+#feltus-homepage .feltus-utility{height:38px;display:flex;justify-content:center;align-items:center;gap:12px;border-bottom:1px solid #ffffff16;background:#050714;font:700 10px/1.4 "Manrope",sans-serif;letter-spacing:.19em;color:#9ba6c4;text-align:center}
+#feltus-homepage .feltus-utility span{color:#b12dff}
+#feltus-homepage .feltus-header{border-bottom:1px solid #ba48fe30;background:linear-gradient(90deg,#050715dd,#090c23b8);position:relative;z-index:5}
+#feltus-homepage .feltus-header-inner{min-height:102px;display:flex;align-items:center;justify-content:space-between;gap:32px}
+#feltus-homepage .feltus-brand{display:flex;align-items:center;gap:12px;min-width:0}
+#feltus-homepage .feltus-brand-mark{height:70px;width:63px;object-fit:contain;filter:drop-shadow(0 0 13px #9a23ed72)}
+#feltus-homepage .feltus-brand-type{display:flex;flex-direction:column;gap:5px}
+#feltus-homepage .feltus-brand-name{white-space:nowrap;font:800 clamp(22px,1.7vw,29px)/1 "Manrope",sans-serif;letter-spacing:-.045em;color:#e7eaf8}
+#feltus-homepage .feltus-brand-name b{color:var(--violet)}
+#feltus-homepage .feltus-brand-sub{font:700 8px/1.4 "Manrope",sans-serif;letter-spacing:.07em;color:#8190b0}
+#feltus-homepage .feltus-nav{display:flex;align-items:center;gap:clamp(14px,1.8vw,31px);font:700 13px/1.5 "Manrope",sans-serif}
+#feltus-homepage .feltus-nav>a:not(.feltus-btn){white-space:nowrap;color:#d7dcee;transition:color .2s}
+#feltus-homepage .feltus-nav>a:hover{color:white}
+#feltus-homepage .feltus-btn{border:1px solid transparent;display:inline-flex;justify-content:center;align-items:center;gap:20px;min-height:56px;padding:13px 27px;border-radius:100px;white-space:nowrap;font:800 13px/1.4 "Manrope",sans-serif;transition:background-color .18s,border-color .18s,transform .18s}
+#feltus-homepage .feltus-btn:hover{transform:translateY(-2px)}
+#feltus-homepage .feltus-btn-primary{background:linear-gradient(115deg,#7318d8,#d438f0);color:white;border-color:#df70ff;box-shadow:0 5px 24px #8b2ad04a}
+#feltus-homepage .feltus-btn-secondary{border-color:#8990b4aa;background:#090e25b8;color:#f6f8ff}
+#feltus-homepage .feltus-btn-nav{min-height:52px;padding-inline:24px}
+#feltus-homepage .feltus-menu-toggle{display:none}
+#feltus-homepage .feltus-hero{border-bottom:1px solid #7833b94d}
+#feltus-homepage .feltus-hero-inner{display:grid;grid-template-columns:minmax(0,48%) minmax(0,52%);align-items:center;min-height:min(758px,calc(100svh - 140px));padding-block:56px 68px}
+#feltus-homepage .feltus-hero-copy{position:relative;z-index:2}
+#feltus-homepage .feltus-eyebrow{display:flex;align-items:center;gap:14px;letter-spacing:.28em;font:800 11px/1.5 "Manrope",sans-serif;color:#c5cce4;margin:0 0 30px}
+#feltus-homepage .feltus-eyebrow>span{width:37px;height:3px;background:linear-gradient(90deg,var(--cyan),var(--violet))}
+#feltus-homepage h1{font:800 clamp(42px,4.4vw,76px)/1.13 "Oxanium","Manrope",sans-serif;letter-spacing:-.045em;margin:0 0 24px;white-space:nowrap}
+#feltus-homepage h1 em{font-style:normal;background:linear-gradient(96deg,#e59cfa 2%,#bb38ef 49%,#13d4ff 97%);background-clip:text;-webkit-background-clip:text;color:transparent}
+#feltus-homepage .feltus-lede{color:#c4cee6;font:400 clamp(15px,1.2vw,19px)/1.8 "DM Sans",sans-serif;max-width:650px;margin:0 0 36px}
+#feltus-homepage .feltus-actions{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+#feltus-homepage .feltus-signature{margin-top:54px;border-top:1px solid #8190b04d;padding-top:29px;max-width:620px;font:800 11px/1.9 "Manrope",sans-serif;letter-spacing:.2em;color:#a9b7d4}
+#feltus-homepage .feltus-signature span{display:block;border-left:3px solid #b12dff;padding-left:18px}
+#feltus-homepage .feltus-hero-visual{position:relative;align-self:center;min-width:0;margin-left:-14px;margin-right:-45px}
+#feltus-homepage .feltus-hero-visual>img{display:block;width:100%;height:auto;object-fit:contain;mask-image:linear-gradient(90deg,transparent 0%,black 9%,black 100%)}
+#feltus-homepage .feltus-visual-caption{text-align:center;display:flex;align-items:center;justify-content:center;gap:13px;font:800 10px/1.5 "Manrope",sans-serif;letter-spacing:.19em;color:#b9c9e7}
+#feltus-homepage .feltus-visual-caption span{color:#c743f0}
+#feltus-homepage .feltus-visual-caption i{width:7px;height:7px;flex-shrink:0;border-radius:50%;background:#13d4ff;box-shadow:0 0 10px #13d4ff}
+@media(max-width:1180px){#feltus-homepage .feltus-nav{gap:14px;font-size:11px}#feltus-homepage .feltus-brand-sub{max-width:240px}#feltus-homepage .feltus-hero-inner{grid-template-columns:52% 48%}#feltus-homepage .feltus-hero-visual{margin-right:-24px}#feltus-homepage h1{font-size:clamp(42px,4.6vw,63px)}}
+@media(max-width:900px){#feltus-homepage .feltus-shell{width:min(680px,calc(100% - 40px))}#feltus-homepage .feltus-header-inner{min-height:80px}#feltus-homepage .feltus-brand-mark{height:58px;width:52px}#feltus-homepage .feltus-brand-sub{font-size:7px}#feltus-homepage .feltus-menu-toggle{display:flex;width:48px;height:48px;flex-direction:column;align-items:center;justify-content:center;gap:6px;border:1px solid #6c739a9c;background:#0b1024;border-radius:12px;color:white;cursor:pointer}#feltus-homepage .feltus-menu-toggle span{width:19px;height:2px;background:currentColor}#feltus-homepage .feltus-nav{display:none;position:absolute;top:100%;left:0;right:0;background:#080c21;flex-direction:column;align-items:stretch;gap:0;padding:12px 22px 22px;border-bottom:1px solid #873ed4}#feltus-homepage .feltus-nav.is-open{display:flex}#feltus-homepage .feltus-nav>a:not(.feltus-btn){font-size:14px;padding:15px 10px;border-bottom:1px solid #ffffff11}#feltus-homepage .feltus-btn-nav{margin-top:14px}#feltus-homepage .feltus-hero-inner{grid-template-columns:1fr;padding-block:48px 58px;min-height:auto}#feltus-homepage .feltus-hero-copy{max-width:680px}#feltus-homepage h1{font-size:clamp(42px,7.3vw,70px)}#feltus-homepage .feltus-hero-visual{margin:18px -22px 0;max-width:680px}#feltus-homepage .feltus-signature{margin-top:34px}#feltus-homepage .feltus-utility{font-size:8px;letter-spacing:.08em;gap:6px}}
+@media(max-width:520px){#feltus-homepage .feltus-utility{height:29px;white-space:nowrap;font-size:6px;letter-spacing:.025em;gap:5px}#feltus-homepage .feltus-header-inner{min-height:72px}#feltus-homepage .feltus-brand-name{font-size:23px}#feltus-homepage .feltus-brand-sub{font-size:6px;letter-spacing:0;max-width:220px}#feltus-homepage .feltus-brand-mark{height:53px;width:49px}#feltus-homepage .feltus-hero-inner{padding-top:44px;padding-bottom:42px}#feltus-homepage .feltus-eyebrow{font-size:9px;letter-spacing:.2em;margin-bottom:22px}#feltus-homepage h1{font-size:clamp(36px,9.25vw,46px);line-height:1.19;letter-spacing:-.045em;margin-bottom:18px}#feltus-homepage .feltus-lede{font-size:15px;line-height:1.75;margin-bottom:26px}#feltus-homepage .feltus-actions{flex-direction:column;align-items:stretch;gap:12px}#feltus-homepage .feltus-btn{width:100%;min-height:52px;font-size:12px;padding-inline:10px}#feltus-homepage .feltus-signature{margin-top:34px;padding-top:20px;font-size:9px;letter-spacing:.13em}#feltus-homepage .feltus-hero-visual{margin:24px -35px 0}#feltus-homepage .feltus-visual-caption{gap:7px;letter-spacing:.08em;font-size:7px}}
+@media(prefers-reduced-motion:reduce){#feltus-homepage *,#feltus-homepage *::before,#feltus-homepage *::after{transition:none!important;animation:none!important}}
