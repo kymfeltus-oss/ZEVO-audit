@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#030512">
+  <meta name="description" content="Make an approved FELTUS LABS invoice, deposit, or project payment through Stripe.">
+  <title>Make a Payment | FELTUS LABS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;family=Oxanium:wght@500;600;700;800&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/checkout.css">
+  <link rel="stylesheet" href="assets/css/consultations.css">
+  <script src="assets/js/checkout.js" defer></script>
+</head>
+<body>
+  <header class="checkout-header booking-header">
+    <a class="wordmark" href="index.html#/home">
+      <img src="assets/images/feltus-brand-mark.png" width="42" height="46" alt="">
+      <span>FELTUS <b>LABS</b><small>FINANCIAL INTELLIGENCE · BUSINESS SYSTEMS</small></span>
+    </a>
+    <a class="header-back" href="consultations.html">Book a Consultation</a>
+  </header>
+  <main>
+    <div class="intro">
+      <h1>Make a <em>payment.</em></h1>
+      <p>Use this form for a previously agreed invoice, project deposit, or balance.</p>
+    </div>
+    <div class="checkout-layout">
+      <section class="panel" aria-labelledby="payment-title">
+        <h2 id="payment-title">Payment details</h2>
+        <noscript><p>JavaScript is required to open secure checkout.</p></noscript>
+        <form id="checkoutForm" hidden>
+          <div class="detail-fields">
+            <div class="input-row">
+              <label for="customerName">Full name</label>
+              <input id="customerName" name="name" required maxlength="100" autocomplete="name">
+            </div>
+            <div class="input-row">
+              <label for="customerEmail">Email address</label>
+              <input id="customerEmail" name="email" type="email" required maxlength="180" autocomplete="email">
+            </div>
+            <div class="input-row">
+              <label for="customAmount">Approved payment amount (USD)</label>
+              <div class="amount-wrap"><span aria-hidden="true">$</span><input id="customAmount" name="amount" type="number" inputmode="decimal" required step="0.01" min="1" max="100000" placeholder="500.00"></div>
+            </div>
+            <div class="input-row">
+              <label for="customPurpose">Payment description</label>
+              <textarea id="customPurpose" name="purpose" required minlength="3" maxlength="160" rows="3"></textarea>
+            </div>
+            <div class="input-row">
+              <label for="invoiceReference">Invoice or project reference (optional)</label>
+              <input id="invoiceReference" name="reference" maxlength="80">
+            </div>
+            <label class="agreement"><input type="checkbox" name="approved" required> <span>I confirm this amount was previously agreed with FELTUS LABS.</span></label>
+          </div>
+          <p class="form-error" id="formError" role="alert" hidden></p>
+          <button type="submit" class="pay-button" id="payButton">Continue to secure checkout</button>
+        </form>
+      </section>
+      <aside class="panel receipt" aria-labelledby="summary-title">
+        <h2 id="summary-title">Payment overview</h2>
+        <div class="total-line"><span>Total due</span><b id="summaryTotal">—</b></div>
+        <p class="smallprint">Stripe hosts checkout. FELTUS LABS reviews submitted references before applying payments to invoices.</p>
+        <p><a class="header-back" href="index.html#/contact">Request a project quote</a></p>
+        <img class="art" src="assets/images/feltus-hero-art.webp" alt="" loading="lazy">
+      </aside>
+    </div>
+  </main>
+</body>
+</html>

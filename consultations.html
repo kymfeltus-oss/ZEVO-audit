@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#030512">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Book a 30-minute or 60-minute financial, accounting, or business systems consultation with FELTUS LABS.">
+  <title>Book a Consultation | FELTUS LABS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@600;700;800&amp;family=Oxanium:wght@500;600;700;800&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/checkout.css">
+  <link rel="stylesheet" href="assets/css/consultations.css">
+  <script src="assets/js/consultations.js" defer></script>
+</head>
+<body>
+  <header class="checkout-header booking-header">
+    <a class="wordmark" href="index.html#/home">
+      <img src="assets/images/feltus-brand-mark.png" width="42" height="46" alt="">
+      <span>FELTUS <b>LABS</b><small>FINANCIAL INTELLIGENCE · BUSINESS SYSTEMS</small></span>
+    </a>
+    <a class="header-back" href="checkout.html">Make a Payment</a>
+  </header>
+  <main>
+    <section id="booking-status" class="panel booking-status" hidden aria-labelledby="status-title">
+      <h1 id="status-title" tabindex="-1">Checking your booking</h1>
+      <p id="status-message" role="status"></p>
+      <dl id="confirmation-details" class="booking-details" hidden></dl>
+      <div class="booking-links">
+        <a class="header-back" id="add-to-calendar" download="feltus-labs-consultation.ics" hidden>Add to Calendar</a>
+        <a class="header-back" id="start-over" href="consultations.html" hidden>Find another appointment</a>
+        <a class="header-back" href="index.html#/contact">Contact FELTUS LABS</a>
+      </div>
+    </section>
+    <div id="booking-flow">
+      <div class="intro">
+        <h1>Book a <em>consultation.</em></h1>
+        <p>Choose a duration and see available times in Central Time (America/Chicago).</p>
+      </div>
+      <noscript><p>JavaScript is required to choose an appointment. <a href="index.html#/contact">Contact FELTUS LABS</a> for help.</p></noscript>
+      <form id="booking-form" class="checkout-layout" hidden>
+        <section class="panel" aria-labelledby="choose-title">
+          <h2 id="choose-title">Choose your appointment</h2>
+          <fieldset class="booking-fieldset">
+            <legend>Consultation length</legend>
+            <label class="booking-package">
+              <input type="radio" name="minutes" value="30" checked>
+              <span><strong>30-minute consultation</strong><small>Focused guidance on a financial, accounting, data, or systems question.</small></span>
+              <strong>$80</strong>
+            </label>
+            <label class="booking-package">
+              <input type="radio" name="minutes" value="60">
+              <span><strong>60-minute consultation</strong><small>A deeper discussion about financial analysis, corporate reviews, acquisitions, or technology.</small></span>
+              <strong>$150</strong>
+            </label>
+          </fieldset>
+          <div class="month-control">
+            <button type="button" id="previous-month" aria-label="Previous month">‹</button>
+            <h3 id="month-title"></h3>
+            <button type="button" id="next-month" aria-label="Next month">›</button>
+          </div>
+          <div id="calendar" class="booking-calendar" role="group" aria-labelledby="month-title"></div>
+          <p id="availability-message" class="smallprint" role="status"></p>
+          <button id="retry-availability" type="button" class="header-back" hidden>Retry availability</button>
+          <fieldset id="times" class="booking-fieldset" hidden>
+            <legend id="time-title">Available times</legend>
+            <div id="time-options" class="booking-times"></div>
+          </fieldset>
+        </section>
+        <section class="panel" aria-labelledby="details-title">
+          <h2 id="details-title">Review and pay</h2>
+          <div class="detail-fields">
+            <div class="input-row">
+              <label for="booking-name">Full name</label>
+              <input id="booking-name" name="name" required maxlength="100" autocomplete="name">
+            </div>
+            <div class="input-row">
+              <label for="booking-email">Email address</label>
+              <input id="booking-email" name="email" type="email" required maxlength="180" autocomplete="email">
+            </div>
+          </div>
+          <dl id="booking-summary" class="booking-details"></dl>
+          <p class="form-error" id="booking-error" role="alert" hidden></p>
+          <button class="pay-button" id="confirm-pay" type="submit" disabled>Confirm &amp; Pay Securely</button>
+          <p class="smallprint">Stripe hosts the payment page. Your appointment is confirmed after payment is verified.</p>
+        </section>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

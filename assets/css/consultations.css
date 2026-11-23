@@ -1,0 +1,51 @@
+[hidden] { display: none !important; }
+
+.booking-header { flex-wrap: wrap; gap: 8px; }
+.booking-header a, .booking-links a { min-height: 48px; display: inline-flex; align-items: center; }
+.booking-fieldset { border: 0; margin: 22px 0 0; padding: 0; min-inline-size: 0; }
+.booking-fieldset legend { font-weight: 700; margin-bottom: 10px; }
+.booking-package {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  margin-bottom: 8px;
+  border: 1px solid #544579;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.booking-package small { display: block; color: #a7aec7; margin-top: 4px; }
+.booking-package:has(:checked) { border-color: #c779ff; background: #1a1240; }
+.month-control { display: flex; justify-content: space-between; align-items: center; margin: 24px 0 10px; gap: 8px; }
+.month-control h3 { margin: 0; text-align: center; }
+.booking-calendar { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; text-align: center; }
+.booking-calendar span { color: #a7aec7; font-size: .75rem; padding-block: 5px; }
+.booking-calendar button, .month-control button, .booking-times label {
+  min-height: 48px;
+  min-width: 0;
+  border: 1px solid #7054a1;
+  background: #151331;
+  color: #f6f8ff;
+  border-radius: 8px;
+  padding: 4px;
+  font: inherit;
+  cursor: pointer;
+}
+.month-control button { width: 48px; font-size: 1.4rem; }
+.booking-calendar button[aria-pressed="true"], .booking-times label:has(:checked) {
+  border-color: #13d4ff;
+  background: #12305a;
+}
+.booking-calendar button:disabled, .month-control button:disabled, .pay-button:disabled { opacity: .48; cursor: default; }
+.booking-times { display: flex; flex-wrap: wrap; gap: 8px; }
+.booking-times label { display: inline-flex; align-items: center; gap: 6px; padding-inline: 10px; }
+.booking-times input, .booking-package input { accent-color: #b12dff; }
+.booking-details { margin: 20px 0; overflow-wrap: anywhere; }
+.booking-details div { padding-block: 9px; border-bottom: 1px solid #40325f; }
+.booking-details dt { color: #a7aec7; font-size: .85rem; }
+.booking-details dd { margin: 3px 0 0; white-space: pre-line; }
+.booking-status { max-width: 760px; margin: 48px auto; }
+.booking-status p { line-height: 1.6; color: #c2bfd6; }
+.booking-links { display: flex; flex-wrap: wrap; gap: 10px; }
+:where(a, button, input, textarea):focus-visible { outline: 2px solid #13d4ff; outline-offset: 2px; }
