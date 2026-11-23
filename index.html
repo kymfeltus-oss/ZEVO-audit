@@ -34,9 +34,6 @@
 <a class="skip" href="#main">Skip to main content</a>
 <div id="legacyAppHooks" hidden aria-hidden="true">
   <div id="homeServicesGrid"></div>
-  <div id="megaLinks"></div>
-  <button id="servicesToggle" type="button" aria-expanded="false"></button>
-  <div id="megaMenu" aria-hidden="true"></div>
   <button id="menuToggle" type="button" aria-expanded="false"></button>
   <span id="year"></span>
 </div>
@@ -46,7 +43,9 @@
 <a href="#/home" class="brand" aria-label="FELTUS LABS homepage">
 <img src="assets/images/feltus-brand-mark.png" alt="FELTUS LABS brand cube" class="brand-cube"><span class="brand-lockup"><span class="brand-wordmark">FELTUS <strong>LABS</strong></span><small>FINANCIAL INTELLIGENCE · BUSINESS SYSTEMS · TECHNOLOGY</small></span></a>
 <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open main menu"><svg class="icon"><use href="#i-menu"/></svg></button>
-<nav id="primary-nav" class="primary-nav" aria-label="Primary navigation"><a href="#/services">What we do <svg class="icon mini"><use href="#i-chevron"/></svg></a><a href="#/about">Our approach</a><a href="#/technology">Technology</a><a href="#/corporate-reviews" data-existing-route="research">Research &amp; reviews</a><a class="btn btn-primary btn-nav" href="#/contact" data-existing-route="project-inquiry">Discuss a project <svg class="icon"><use href="#i-arrow"/></svg></a></nav>
+<nav id="primary-nav" class="primary-nav" aria-label="Primary navigation"><button class="menu-trigger" id="servicesToggle" type="button" aria-controls="megaMenu" aria-expanded="false">What we do <svg class="icon mini" aria-hidden="true"><use href="#i-chevron"/></svg></button>
+<div aria-hidden="true" class="mega-menu" id="megaMenu"><div class="wrap mega-inner"><div class="mega-intro"><span class="minor">OUR EXPERTISE</span><h3>One company.<br/>Six ways forward.</h3><p>Specialized financial and systems support, organized around the problem you're here to solve.</p><a class="btn btn-ghost" href="#/services">Explore all services →</a></div><div class="mega-grid" id="megaLinks"></div></div></div>
+<a href="#/about">Our approach</a><a href="#/technology">Technology</a><a href="#/corporate-reviews" data-existing-route="research">Research &amp; reviews</a><a class="btn btn-primary btn-nav" href="#/contact" data-existing-route="project-inquiry">Discuss a project <svg class="icon"><use href="#i-arrow"/></svg></a></nav>
 </div></header>
 <nav aria-hidden="true" aria-label="Mobile navigation" class="mobile-nav" id="mobileNav"><div class="mobile-label">Explore FELTUS LABS</div><a href="#/home">Home <svg fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg></a><div class="mobile-label">Our six divisions</div><div id="mobileServices"></div><div class="mobile-label">More</div><a href="intro.html">Meet Feltus Labs →</a><a href="consultations.html">Book a Consultation →</a><a href="checkout.html">Make a Payment →</a><a href="#/about">Our approach →</a><a href="#/technology">Technology &amp; platforms →</a><a class="mobile-cta" href="#/contact">Discuss a project →</a></nav>
 <main id="main" tabindex="-1">
